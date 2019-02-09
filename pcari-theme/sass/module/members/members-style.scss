@@ -1,0 +1,160 @@
+//Fonts
+$font-Lato: 'Lato', sans-serif;
+$font-Montserrat: 'Montserrat', sans-serif;
+
+// Color Pallete
+$color1: #252525;
+$color1d: darken($color1, 10);
+$color2: #014758;
+$color2d: darken($color2, 10);
+$color3: #9cdef2;
+$color3d: darken($color3, 10);
+$color4: #eba53e;
+$color4d: darken($color4, 10);
+$color5: #6c6d41;
+$color5d: darken($color5, 10);
+$color6: #9a9e6e;
+$color6d: darken($color6, 10);
+
+// Transition
+$transition: all 0.4s ease-in-out;
+
+main:not(.search-main) .page-pcari-all-members,
+main:not(.search-main) .post-pcari-single-members {
+    
+    .entry-header,
+    .post-thumbnail {
+        display: none;
+    }
+}
+
+.all-members-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    width: 600px;
+    max-width: 100%;
+    margin-top: 50px;
+    
+    .member-item {
+        margin-top: 30px;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #c4e6ef 86%, #9cdef2 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #c4e6ef 86%, #9cdef2 100%);
+        background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #c4e6ef 86%, #9cdef2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#9cdef2', GradientType=0);
+        
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+        
+        .member-info {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.4;
+            padding: 15px;
+            
+            .member-name {
+                font-size: 18px;
+            }
+            
+            .member-divider-label {
+                font-size: inherit;
+                margin: 0;
+            }
+            
+            > div {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+.member-item {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-top: 50px;
+    
+    .member-heading {
+        width: 100%;
+        font-family: $font-Montserrat;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color2;
+        margin-bottom: 20px;
+        
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            border-bottom: 2px solid $color2;
+        }
+    }
+    
+    .member-img {
+        display: block;
+        width: 200px;
+        height: 160px;
+        
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+    
+    .member-info {
+        width: calc(100% - 200px);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.4;
+        padding-left: 15px;
+        
+        .member-name {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 1;
+            color: $color5;
+            margin-bottom: 10px;
+            
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                color: inherit;
+                text-decoration: none;
+                transition: $transition;
+                
+                &:hover {
+                    color: $color5d;
+                }
+            }
+        }
+        
+        .member-description {
+            margin-top: 15px;
+            text-align: justify;
+        }
+        
+        .member-divider-label {
+            font-weight: 700;
+            margin: 30px 0 10px;
+            font-size: 20px;
+        }
+        
+        > div {
+            
+            &.w-icon {
+                
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
